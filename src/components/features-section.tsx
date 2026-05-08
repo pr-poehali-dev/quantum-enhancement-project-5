@@ -3,51 +3,51 @@ import { Badge } from "@/components/ui/badge"
 
 const features = [
   {
-    title: "Адаптивная нейрообработка",
-    description: "Самооптимизирующиеся алгоритмы, которые обучаются на нейронных паттернах и улучшают интерпретацию сигналов.",
-    icon: "brain",
-    badge: "ИИ",
+    title: "After Effects эдиты",
+    description: "Динамичный монтаж с эффектами, переходами и синхронизацией под музыку. Ваш контент выглядит как клип с большим бюджетом.",
+    icon: "film",
+    badge: "After Effects",
   },
   {
-    title: "Медицинская защита",
-    description: "Шифрование по стандартам FDA со сквозной защитой конфиденциальных нейронных данных.",
-    icon: "lock",
-    badge: "Сертификат",
+    title: "Монтаж до 1 минуты",
+    description: "Короткие видео — самый просматриваемый формат. Делаю плотный, насыщенный монтаж без воды и лишних кадров.",
+    icon: "clock",
+    badge: "1 мин",
   },
   {
-    title: "Интуитивное управление",
-    description: "Естественная трансляция мыслей в действия с откликом менее миллисекунды и точностью 99,7%.",
-    icon: "globe",
-    badge: "Точность",
-  },
-  {
-    title: "Предиктивная калибровка",
-    description: "ML-модели, которые предугадывают намерения пользователя и оптимизируют нейронные пути.",
+    title: "Быстрые сроки",
+    description: "Получи готовый эдит уже через 24-48 часов. Работаю чётко и без затяжек — твой контент не будет лежать в очереди.",
     icon: "zap",
-    badge: "Умный",
+    badge: "Быстро",
   },
   {
-    title: "Биометрическая интеграция",
-    description: "Бесшовная синхронизация с мониторингом жизненных показателей для контроля здоровья.",
-    icon: "link",
-    badge: "Связь",
+    title: "Цветокоррекция",
+    description: "Профессиональный грейдинг: кино-цвета, насыщенность, контраст. Видео приобретает свой уникальный визуальный стиль.",
+    icon: "palette",
+    badge: "Цвет",
   },
   {
-    title: "Поддержка XR",
-    description: "Нативная совместимость с AR/VR-средами для терапевтических и рабочих приложений.",
-    icon: "target",
-    badge: "XR Ready",
+    title: "Текст и субтитры",
+    description: "Анимированные титры, субтитры и надписи в кадре. Повышают досматриваемость и делают видео понятным без звука.",
+    icon: "type",
+    badge: "Текст",
+  },
+  {
+    title: "Результат под платформу",
+    description: "Вертикальный формат для Reels и TikTok, горизонтальный для YouTube. Всё отдаётся в нужном разрешении и кодеке.",
+    icon: "monitor",
+    badge: "Форматы",
   },
 ]
 
 export function FeaturesSection() {
   return (
-    <section className="py-24 px-6 bg-background">
+    <section id="features" className="py-24 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-foreground mb-4 font-sans">Возможности нового поколения</h2>
+          <h2 className="text-4xl font-bold text-foreground mb-4 font-sans">Что входит в эдит</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Почувствуйте будущее с технологиями, которые переопределяют возможное
+            Каждый ролик — это ручная работа с вниманием к каждому кадру
           </p>
         </div>
 
@@ -61,12 +61,12 @@ export function FeaturesSection() {
               <CardHeader>
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-3xl">
-                    {feature.icon === "brain" && "&#129504;"}
-                    {feature.icon === "lock" && "&#128274;"}
-                    {feature.icon === "globe" && "&#127760;"}
-                    {feature.icon === "zap" && "&#9889;"}
-                    {feature.icon === "link" && "&#128279;"}
-                    {feature.icon === "target" && "&#127919;"}
+                    {feature.icon === "film" && "🎬"}
+                    {feature.icon === "clock" && "⏱️"}
+                    {feature.icon === "zap" && "⚡"}
+                    {feature.icon === "palette" && "🎨"}
+                    {feature.icon === "type" && "✍️"}
+                    {feature.icon === "monitor" && "📱"}
                   </span>
                   <Badge variant="secondary" className="bg-accent text-accent-foreground">
                     {feature.badge}
