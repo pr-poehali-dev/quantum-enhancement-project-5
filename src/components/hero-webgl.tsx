@@ -137,7 +137,7 @@ export const Hero3DWebGL = () => {
   }, [visibleWords, titleWords.length])
 
   return (
-    <div className="h-screen bg-black relative overflow-hidden">
+    <div className="h-[75vh] min-h-[500px] bg-black relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none z-10">
         <div className="absolute top-0 left-0 right-0 h-32 bg-gradient-to-b from-black to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black to-transparent" />
@@ -145,7 +145,7 @@ export const Hero3DWebGL = () => {
         <div className="absolute top-0 bottom-0 right-0 w-32 bg-gradient-to-l from-black to-transparent" />
       </div>
 
-      <div className="h-screen uppercase items-center w-full absolute z-[60] pointer-events-none px-10 flex justify-center flex-col">
+      <div className="h-[75vh] min-h-[500px] uppercase items-center w-full absolute z-[60] px-10 flex justify-center flex-col gap-6">
         <div className="text-3xl md:text-5xl xl:text-6xl 2xl:text-7xl font-extrabold font-orbitron">
           <div className="flex space-x-2 lg:space-x-6 overflow-hidden text-white">
             {titleWords.map((word, index) => (
@@ -162,7 +162,7 @@ export const Hero3DWebGL = () => {
             ))}
           </div>
         </div>
-        <div className="text-xs md:text-xl xl:text-2xl 2xl:text-3xl mt-2 overflow-hidden text-white font-bold max-w-4xl mx-auto text-center px-4">
+        <div className="text-xs md:text-xl xl:text-2xl 2xl:text-3xl overflow-hidden text-white font-bold max-w-4xl mx-auto text-center px-4 normal-case">
           <div
             className={subtitleVisible ? "fade-in-subtitle" : ""}
             style={{
@@ -173,6 +173,22 @@ export const Hero3DWebGL = () => {
             {subtitle}
           </div>
         </div>
+        {subtitleVisible && (
+          <div className="fade-in flex flex-col sm:flex-row gap-4 normal-case" style={{ animationDelay: "0.2s" }}>
+            <button
+              onClick={() => window.open("https://t.me/hanzi77", "_blank")}
+              className="bg-red-500 hover:bg-red-600 text-white font-geist font-semibold px-8 py-3 rounded-md transition-colors duration-200 text-base"
+            >
+              Заказать эдит — от 1390₽
+            </button>
+            <button
+              onClick={() => document.getElementById("features")?.scrollIntoView({ behavior: "smooth" })}
+              className="border border-white/30 hover:border-red-500 text-white font-geist px-8 py-3 rounded-md transition-colors duration-200 text-base"
+            >
+              Смотреть работы ↓
+            </button>
+          </div>
+        )}
       </div>
 
       <Canvas
